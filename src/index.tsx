@@ -5,27 +5,31 @@ interface AppProps {
   color?: string;
 }
 
-class App extends React.Component<AppProps> {
+const App = (props: AppProps): JSX.Element => {
+  return <div>{props.color}</div>
+};
 
-  state = { counter: 0 };
+// class App extends React.Component<AppProps> {
 
-  onIncrement = (): void => {
-    this.setState({ counter: this.state.counter + 1});
-  };
+//   state = { counter: 0 };
 
-  onDecrement = (): void => {
-    this.setState({ counter: this.state.counter - 1});
-  };
+//   onIncrement = (): void => {
+//     this.setState({ counter: this.state.counter + 1});
+//   };
 
-  render() {
-    return (
-      <div>
-        <button onClick={this.onIncrement}>+</button>
-        <button onClick={this.onDecrement}>-</button>
-        {this.state.counter}
-      </div>
-    )
-  }
-}
+//   onDecrement = (): void => {
+//     this.setState({ counter: this.state.counter - 1});
+//   };
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+//   render() {
+//     return (
+//       <div>
+//         <button onClick={this.onIncrement}>+</button>
+//         <button onClick={this.onDecrement}>-</button>
+//         {this.state.counter}
+//       </div>
+//     )
+//   }
+// }
+
+ReactDOM.render(<App color='white' />, document.querySelector('#root'));
