@@ -15,6 +15,8 @@ interface AppState {
 
 class _App extends React.Component<AppProps, AppState> {
 
+  // state = { fetching: false };
+
   constructor(props: AppProps) {
     super(props);
 
